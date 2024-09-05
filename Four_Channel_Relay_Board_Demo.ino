@@ -10,6 +10,10 @@
   Modified:  April 17, 2024
   by Todd S. Canaday
   tcanaday@memphis.edu
+  
+  Reference Link For Understanding Relays:
+  
+  https://docs.arduino.cc/tutorials/4-relays-shield/4-relay-shield-basics/
    
   Revision Notes:
   

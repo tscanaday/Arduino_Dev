@@ -6,6 +6,10 @@
   This is a simple program that reads from a DS18B20
   temperature sensor and displays the values read to
   an OLED display.
+  
+  Reference Link For Connecting DS18B20:
+  
+  https://lastminuteengineers.com/ds18b20-arduino-tutorial/
 
   Device:     Address:
   -------     -----------

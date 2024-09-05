@@ -5,6 +5,10 @@
   
   This is a simple program that reads from a DHT11 temperature / humidity
   sensor and displays the values read to an OLED display.
+  
+  Reference Link For Connecting DHT11:
+  
+  https://lastminuteengineers.com/dht11-module-arduino-tutorial/
 
   Device:     Address:
   -------     -----------
