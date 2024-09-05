@@ -94,6 +94,9 @@ void loop()
   PrintDeviceAddress(addr);
   //  delay between readings from the sensor...
   delay(delay_time);
+
+  //  display readings to the console if enabled...
+  PrintReadingsToConsole();
 }
 
 /**
@@ -271,6 +274,23 @@ void LCDPrintHexPlain(byte value)
 }
 
 /**
+ * PrintDeviceAddressToConsole()
+ * Method used to dislpay the address of the
+ * DS18B20 device to the console.
+ */
+void PrintDeviceAddressToConsole()
+{
+  Serial.print(addr[0],HEX);
+  Serial.print("-");
+  Serial.print(addr[6],HEX);
+  Serial.print(addr[5],HEX);
+  Serial.print(addr[4],HEX);
+  Serial.print(addr[3],HEX);
+  Serial.print(addr[2],HEX);
+  Serial.println(addr[1],HEX);
+}
+
+/**
  * PrintReadingsToConsole
  * Method used to print out readings from
  * the sensors to the serial port if
@@ -278,5 +298,10 @@ void LCDPrintHexPlain(byte value)
  */
 void PrintReadingsToConsole()
 {
-  Serial.println(temperature);
+  //  print readings to the console if enabled...
+  Serial.print(F("Temperature:  "));
+  Serial.print(temperature);
+  Serial.println(F("°F"));
+  Serial.print(F("Device Address:  "));
+  PrintDeviceAddressToConsole();
 }
